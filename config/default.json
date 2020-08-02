@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://eventsuser:87654321@eventsscheduler.7odwr.mongodb.net/events?retryWrites=true&w=majority",
+  "jwtSecret": "MySecretKey"
+}
