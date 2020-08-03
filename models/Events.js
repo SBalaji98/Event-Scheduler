@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const UserEventsSchema = new mongoose.Schema({
   userId: {
@@ -9,24 +9,4 @@ const UserEventsSchema = new mongoose.Schema({
   events: [],
 });
 
-module.exports = Events = mongoose.model('events', UserEventsSchema);
-// {
-//     title: {
-//       type: String,
-//     },
-//     start: {
-//       type: Date,
-//       required: true,
-//     },
-//     end: {
-//       type: Date,
-//       required: true,
-//     },
-//     allDay: {
-//       type: Boolean,
-//       default: false,
-//     },
-//     desc: {
-//       type: String,
-//     },
-//   },
+module.exports = Events = mongoose.model("events", UserEventsSchema);

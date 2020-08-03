@@ -1,39 +1,39 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const auth = require('../../middleware/auth');
-const Events = require('../../models/Events');
+const auth = require("../../middleware/auth");
+const Events = require("../../models/Events");
 
 //@route  GET api/posts
 //@desc   Test route
 //@access Public
 
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const events = await Events.findOne({ userId: req.query.userId });
     res.json(events);
   } catch (error) {
     console.error(error.message);
-    res.status(500).send('Server Error');
+    res.status(500).send("Server Error");
   }
 });
 
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
   try {
-    let { userId, events } = req.body;
+    let { events } = req.body;
 
-    let eventsObject = await Events.findOne({ userId: userId });
+    let eventsObject = await Events.findOne({ userId: req.query.userId });
 
     events = [...eventsObject.events, ...events];
 
     eventsObject = await Events.findOneAndUpdate(
-      { userId: userId },
+      { userId: req.query.userId },
       { events: events },
       { returnOriginal: false }
     );
-    res.status(200).json(events);
+    res.status(200).json(eventsObject);
   } catch (error) {
     console.error(error.message);
-    res.status(500).send('Server Error');
+    res.status(500).send("Server Error");
   }
 });
 

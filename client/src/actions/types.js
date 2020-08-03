@@ -7,3 +7,7 @@ export const AUTH_ERROR = "AUTH_ERROR";
 export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 export const LOGIN_FAIL = "LOGIN_FAIL";
 export const LOGOUT = "LOGOUT";
+export const CREATE_EVENT_SUCCESS = "CREATE_EVENT_SUCCESS";
+export const CREATE_EVENT_FAIL = "CREATE_EVENT_FAIL";
+export const GET_EVENT_SUCCESS = "GET_EVENT_SUCCESS";
+export const GET_EVENT_FAIL = "GET_EVENT_FAIL";
