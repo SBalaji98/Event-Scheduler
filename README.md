@@ -49,6 +49,7 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
 - create events by clicking on dates or dragging a range of dates 
 
 
+### Next Steps
 ### Features to be added
 
 - the gant chart part is leftout, here I would use  "gantt-for-react" 
