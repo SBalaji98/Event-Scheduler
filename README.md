@@ -39,4 +39,24 @@ Also, be sure to have `git` available in your PATH, `npm` might need it (You can
 ## Running the project
 
     $ npm run dev
+    
+   
+## Features available 
 
+- User authentication based on jwt
+- User registration and access
+- calendar view for monhth and day only for authenticated user
+- create events by clicking on dates or dragging a range of dates 
+
+
+### Features to be added
+
+- the gant chart part is leftout, here I would use  "gantt-for-react" 
+- the reason for the selection is the data format required for the interface is very much similar to that of 
+  the model I have used in this project
+
+## events alert system using python
+
+- Alerts via email can be given to the user by comparing the system time and the events time
+- the python script uses boto3 to access sns service that sends email to respective user emails
+- the python script can be made as a cronjob 
